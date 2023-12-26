@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  --box-fluid-height: 300px;
+  --box-expand-indicator-display: block;
+}
+
+body {
+  height: 100%;
+}
+
+.box-container {
+  margin: 0 auto;
+  width: 50%;
+  min-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border-left: 1px solid #E0E0E0;
+  border-right: 1px solid #E0E0E0;
+  padding: 16px;
+}
+
+.box-fluid {
+  border-radius: 4px;
+  border: 1px solid #E0E0E0;
+  height: var(--box-fluid-height, 300px);
+  overflow: hidden;
+  padding: 8px;
+  transition: height .3s;
+  position: relative;
+}
+
+.box-fluid:not(.box-fluid--expanded):after {
+  display: var(--box-expand-indicator-display);
+  content: url('./imgs/chevron.png');
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 0;
+  bottom: 0;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  margin-top: auto;
+}
+
+.box-fluid+.box-fluid {
+  margin-top: 16px;
+}
