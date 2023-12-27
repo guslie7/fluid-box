@@ -32,7 +32,7 @@ body {
   height: var(--box-fluid-height, 300px);
   overflow: hidden;
   padding: 8px;
-  transition: height .3s;
+  transition: height .8s;
   position: relative;
 }
 
