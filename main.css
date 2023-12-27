@@ -36,6 +36,16 @@ body {
   position: relative;
 }
 
+.box-fluid__inner {
+  white-space: nowrap;
+  will-change: transform;
+}
+
+.box-fluid__inner.marquee-transition {
+  transition: transform 40s;
+  transition-timing-function: ease-out;
+}
+
 .box-fluid:not(.box-fluid--expanded):after {
   display: var(--box-expand-indicator-display);
   content: url('./imgs/chevron.png');
